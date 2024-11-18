@@ -1,0 +1,179 @@
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+    padding: 20px;
+    position: relative;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+header h1 {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e30613;
+}
+
+/* Estilo para a seção de notícias */
+.news-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.news-item {
+    background-color: #f8f8f8;
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item h3 {
+    font-size: 1.8em;
+    font-family: 'Poppins', sans-serif;
+    color: #e30613;
+}
+
+.news-item p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #333;
+}
+
+.news-item a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1.1em;
+    text-decoration: none;
+    color: #e30613;
+    transition: color 0.3s ease;
+}
+
+.news-item a:hover {
+    color: #000;
+}
+
+/* Efeito de hover e clique */
+.news-item:hover {
+    transform: scale(1.05);
+}
+
+.news-item:active {
+    transform: scale(0.98);
+}
+
+/* Estilo para o rodapé */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.1em;
+    color: #333;
+    font-family: 'Lora', serif;
+    padding: 20px 0;
+    background-color: #f8f8f8;
+    position: relative;
+}
+
+/* Adiciona animação na seção de notícias */
+.noticias {
+    margin: 20px auto;
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+    opacity: 0; /* Inicia invisível */
+    transform: translateY(30px); /* Desliza para cima */
+    animation: slideIn 1s ease-out forwards; /* Animação de entrada */
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Retorna à posição original */
+    }
+}
+
+/* Estilo para os blocos de notícias */
+.noticia {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transform: translateY(50px); /* Começa deslocado */
+    opacity: 0; /* Inicia invisível */
+    animation: fadeIn 0.8s ease-out forwards; /* Animação individual */
+}
+
+.noticia:nth-child(1) {
+    animation-delay: 0.2s; /* Atraso para o primeiro bloco */
+}
+
+.noticia:nth-child(2) {
+    animation-delay: 0.4s; /* Atraso para o segundo bloco */
+}
+
+.noticia:nth-child(3) {
+    animation-delay: 0.6s; /* Atraso para o terceiro bloco */
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Retorna à posição original */
+    }
+}
+
+/* Zoom ao passar o mouse */
+.noticia:hover {
+    transform: scale(1.05); /* Aumenta levemente */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
